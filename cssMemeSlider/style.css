@@ -19,25 +19,25 @@
 }
 
 #slide1:checked ~ .slider {
-	background-image: url(assets/images_1.jfif);
+	background-image: url(./assets/images_1.jfif);
 	background-size: 100% 100%;
 	transition: 2s;
 }
 
 #slide2:checked ~ .slider {
-	background-image: url(assets/images_2.jfif);
+	background-image: url(./assets/images_2.jfif);
 	background-size: 100% 100%;
 	transition: 2s;
 }
 
 #slide3:checked ~ .slider {
-	background-image: url(assets/images_3.jfif);
+	background-image: url(./assets/images_3.jfif);
 	background-size: 100% 100%;
 	transition: 2s;
 }
 
 #slide4:checked ~ .slider {
-	background-image: url(assets/images_4.jfif);
+	background-image: url(./assets/images_4.jfif);
 	background-size: 100% 100%;
 	transition: 2s;
 }
