@@ -1,0 +1,170 @@
+#wrapper{
+    width: 1024px;
+	height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+	background-color: wheat;
+}
+
+.slider{
+	margin: auto;
+	width: 500px;
+	height: 350px;
+}
+
+#wrapper > input{
+	display: none;
+}
+
+#slide1:checked ~ .slider {
+	background-image: url(assets/images_1.jfif);
+	background-size: 100% 100%;
+	transition: 2s;
+}
+
+#slide2:checked ~ .slider {
+	background-image: url(assets/images_2.jfif);
+	background-size: 100% 100%;
+	transition: 2s;
+}
+
+#slide3:checked ~ .slider {
+	background-image: url(assets/images_3.jfif);
+	background-size: 100% 100%;
+	transition: 2s;
+}
+
+#slide4:checked ~ .slider {
+	background-image: url(assets/images_4.jfif);
+	background-size: 100% 100%;
+	transition: 2s;
+}
+
+.textAndControlPanel{
+	display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:flex-start;
+	margin: auto;
+	width: 500px;
+	height: 25px;
+}
+
+
+.controlPanel {
+	width: 300px;
+	height: 25px;
+	text-align: right;
+}
+
+#wrapper .textAndControlPanel .controlPanel label {
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	margin: 0px;
+	border-radius: 50%;
+	background-color: red;
+	transition: background ease-in-out 1s;
+}
+
+#wrapper #slide1:checked ~ .textAndControlPanel .controlPanel label:nth-of-type(1),
+#slide2:checked ~ .textAndControlPanel .controlPanel label:nth-of-type(2),
+#slide3:checked ~ .textAndControlPanel .controlPanel label:nth-of-type(3),
+#slide4:checked ~ .textAndControlPanel .controlPanel label:nth-of-type(4)
+{
+	border: 2px solid red;
+	height: 18px;
+	width: 18px;
+	content: " ";
+	background-color: wheat;
+}
+
+#wrapper  .textAndControlPanel .controlPanel label:hover {
+	background-color: blue;
+}
+
+#wrapper #slide1:checked ~ .textAndControlPanel .controlPanel label:hover:nth-of-type(1),
+#slide2:checked ~ .textAndControlPanel .controlPanel label:hover:nth-of-type(2),
+#slide3:checked ~ .textAndControlPanel .controlPanel label:hover:nth-of-type(3),
+#slide4:checked ~ .textAndControlPanel .controlPanel label:hover:nth-of-type(4)
+{
+	border: 2px solid blue;
+}
+
+.IDtext{
+	width: 170px;
+	height: 25px;
+}
+
+#wrapper #slide1:checked ~ div .IDtext:after {
+	content: "Tthe first screen!!!";
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	transition: 10s;
+}
+
+#slide2:checked ~ div .IDtext:after {
+	content: "Tthe second screen!!!";
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	transition: 10s;
+}
+
+#slide3:checked ~ div .IDtext:after {
+	content: "Tthe third screen!!!";
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	transition: 10s;
+}
+
+#slide4:checked ~ div .IDtext:after {
+	content: "Tthe fourth screen!!!";
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	transition: 10s;
+}
+
+@media (max-width:500px) {
+
+	#wrapper{
+		width: 450px;
+		height: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 16px;
+		padding-right: 16px;
+		background-color: wheat;
+	}
+	
+	.slider{
+		margin: auto;
+		width: 450px;
+		height: 350px;
+	}
+
+	.textAndControlPanel{
+		display: flex;
+		flex-direction: column;
+		justify-content:space-between;
+		align-items: center;
+		margin: auto;
+		width: 500px;
+		height: 25px;
+	}
+
+	.controlPanel {
+		width: 300px;
+		height: 25px;
+		text-align: center;
+	}
+
+	.IDtext{
+		width: 170px;
+		height: 25px;
+		text-align: center;
+	}
+}
